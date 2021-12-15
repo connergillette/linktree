@@ -4,6 +4,7 @@
 <p align="center">
   <img src="./timelog.png">
 </p>
+
 I thought it would be interesting (and informative for you) to track my time spent on different tasks with [Toggl](https://toggl.com/track/). It also shows where I landed between the 3 and 4 hour mark that was suggested.
 
 # Running This Project
