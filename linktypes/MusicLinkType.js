@@ -35,7 +35,7 @@ module.exports = {
       }
 
       return await new MusicLink({
-        songDetails,
+        ...songDetails,
         songLocations: songLocations,
       }).save()
     } catch (e) {
