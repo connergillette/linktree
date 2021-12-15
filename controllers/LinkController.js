@@ -21,8 +21,10 @@ module.exports = {
     }
   },
   getLinks: async (req, res) => {
+    let userId = req.query.userId
+    let dateCreatedSort = req.query.dateCreated ? req.query.dateCreated : 'desc'
     res.send(
-      await Link.find({user: (await User.findById(req.query.userId))}).sort({dateCreated: 'asc'}).populate('sublink')
+      await Link.find({user: (await User.findById(userId))}).sort({dateCreated: dateCreatedSort}).populate('sublink')
     )
   }
 }
