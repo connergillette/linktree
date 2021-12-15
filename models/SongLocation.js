@@ -2,8 +2,8 @@ const mongoose = require('mongoose')
 const { Schema } = mongoose
 
 const schema = new Schema({
-  linkDestination: String,
-  embedCode: String,
+  linkDestination: { type: String, required: true },
+  embedCode: { type: String, required: true },
   platform: {
     type: mongoose.Schema.ObjectId,
     ref: 'MusicPlatform',

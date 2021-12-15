@@ -11,6 +11,7 @@ const RootLinkType = require('../linktypes/RootLinkType')
 
 module.exports = {
   // TODO: Implement better error handling / validation
+  // TODO: Document request schema (e.g. username instead of userId)
   createLink: async (req, res) => {
     try {
       let linkType = TypeMap[req.params.type]

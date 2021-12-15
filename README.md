@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="./Screen%20Shot%202019-07-08%20at%202.09.47%20pm.png">
-</p>
+## Thanks for your consideration! :)
 
 # Running This Project
 1. Install [NodeJS](https://nodejs.org/en/) and [MongoDB Community Server](https://www.mongodb.com/try/download/community) if you don't have them already. I would also encourage [MongoDB Compass](https://www.mongodb.com/products/compass) for more easily observing data changes.
@@ -15,6 +13,10 @@
 	- POST (register) a User.
 
 Enjoy!
+
+<p align="center">
+  <img src="./Screen%20Shot%202019-07-08%20at%202.09.47%20pm.png">
+</p>
 
 # The Problem
 We have three new link types for our users.

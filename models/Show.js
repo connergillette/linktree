@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const { Schema } = mongoose
 
 const schema = new Schema({
-  date: Date,
+  date: { type: Date, required: true },
   venueName: { type: String, required: true },
   cityName: { type: String, required: true },
   linkDestination: { type: String, required: true },
