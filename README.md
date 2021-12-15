@@ -2,6 +2,15 @@
   <img src="./Screen%20Shot%202019-07-08%20at%202.09.47%20pm.png">
 </p>
 
+# Running This Project
+1. Install [NodeJS](https://nodejs.org/en/) and [MongoDB Community Server](https://www.mongodb.com/try/download/community) if you don't have them already.
+2. After cloning the project, copy the contents of `.env.sample` into a new file called `.env`, which also needs to be in the root project directory.
+3. Run `npm install`.
+4. Run `npm start`.
+5. I recommend using Postman to make requests to `localhost:3000` in order to interact with the API.
+
+Enjoy!
+
 # The Problem
 We have three new link types for our users.
 

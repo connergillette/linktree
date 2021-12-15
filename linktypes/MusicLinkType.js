@@ -5,7 +5,8 @@ const MusicPlatform = require('../models/MusicPlatform')
 const MusicLink = require('../models/MusicLink')
 
 module.exports = {
-  create: async (rootLink, data) => {
+  ref: 'MusicLink',
+  create: async (data) => {
     try {
       let songDetails = {
         songName: data.songName,
@@ -36,7 +37,6 @@ module.exports = {
       return await new MusicLink({
         songDetails,
         songLocations: songLocations,
-        rootLink: rootLink
       }).save()
     } catch (e) {
       throw new Error(`Could not create link: ${e.message}`)

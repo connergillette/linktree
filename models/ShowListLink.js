@@ -4,12 +4,10 @@ const { Schema } = mongoose
 const schema = new Schema({
   shows: [{
     type: mongoose.Schema.ObjectId,
-    ref: 'Show'
-  }],
-  rootLink: {
-    type: mongoose.Schema.ObjectId,
-    ref: 'Link'
-  }
+    ref: 'Show',
+    autopopulate: true,
+    required: true
+  }]
 })
-
+schema.plugin(require('mongoose-autopopulate'));
 module.exports = mongoose.model('ShowListLink', schema);

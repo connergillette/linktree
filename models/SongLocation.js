@@ -6,8 +6,9 @@ const schema = new Schema({
   embedCode: String,
   platform: {
     type: mongoose.Schema.ObjectId,
-    ref: 'MusicPlatform'
+    ref: 'MusicPlatform',
+    autopopulate: true
   }
 })
-
+schema.plugin(require('mongoose-autopopulate'));
 module.exports = mongoose.model('SongLocation', schema);

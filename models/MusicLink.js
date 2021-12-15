@@ -8,12 +8,10 @@ const schema = new Schema({
   artistName: String,
   songLocations: [{
     type: mongoose.Schema.ObjectId,
-    ref: 'SongLocation'
-  }],
-  rootLink: {
-    type: mongoose.Schema.ObjectId,
-    ref: 'Link'
-  }
+    ref: 'SongLocation',
+    autopopulate: true,
+    required: true
+  }]
 })
-
+schema.plugin(require('mongoose-autopopulate'));
 module.exports = mongoose.model('MusicLink', schema);

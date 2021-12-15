@@ -13,16 +13,20 @@ async function seedDB() {
 
   if (await User.findOne() === null) {
     console.log('Seeding user and classic link...')
-    await new User(requestData).save()
-  
-    await new Link({
-      user: user,
-      title: 'Classic Link'
+    let user = await new User({
+      "username": "connergillette",
+      "fullName": "Conner Gillette",
+      "photoURL": "https://avatars.githubusercontent.com/u/12959867?v=4"
     }).save()
   
-    await new ClassicLink({
-      linkDestination: 'https://linkedin.com/in/connergillette',
-      rootLink: createdRootLink
+    let classicLink = await new ClassicLink({
+      linkDestination: 'https://linkedin.com/in/connergillette'
+    }).save()
+
+    await new Link({
+      user: user,
+      title: 'Classic Link',
+      sublink: classicLink
     }).save()
   }
   

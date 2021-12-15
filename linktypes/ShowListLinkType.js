@@ -4,7 +4,8 @@ const Show = require('../models/Show')
 const ShowListLink = require('../models/ShowListLink')
 
 module.exports = {
-  create: async (rootLink, data) => {
+  ref: 'ShowListLink',
+  create: async (data) => {
     try {
       let shows = []
       for (let showDetail of data.showDetails) {
@@ -22,7 +23,6 @@ module.exports = {
 
       return await new ShowListLink({
         shows: shows,
-        rootLink: rootLink
       }).save()
     } catch (e) {
       throw new Error(`Could not create link: ${e.message}`)

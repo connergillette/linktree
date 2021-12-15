@@ -30,6 +30,7 @@ connectToDB()
 app.get('/', function (req, res) {
   res.send('Hello, world!')
 })
+app.get('/link', LinkController.getLinks)
 
 app.post('/link/create/:type', LinkController.createLink)
 app.post('/user/register', AuthController.registerUser)
