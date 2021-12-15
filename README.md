@@ -1,5 +1,11 @@
 ## Thanks for your consideration! :)
 
+# Time Breakdown
+<p align="center">
+  <img src="./timelog.png">
+</p>
+I thought it would be interesting (and informative for you) to track my time spent on different tasks with [Toggl](https://toggl.com/track/). It also shows where I landed between the 3 and 4 hour mark that was suggested.
+
 # Running This Project
 1. Install [NodeJS](https://nodejs.org/en/) and [MongoDB Community Server](https://www.mongodb.com/try/download/community) if you don't have them already. I would also encourage [MongoDB Compass](https://www.mongodb.com/products/compass) for more easily observing data changes.
 2. After cloning the project, copy the contents of `.env.sample` into a new file called `.env`, which also needs to be in the root project directory.
