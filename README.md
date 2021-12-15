@@ -3,11 +3,16 @@
 </p>
 
 # Running This Project
-1. Install [NodeJS](https://nodejs.org/en/) and [MongoDB Community Server](https://www.mongodb.com/try/download/community) if you don't have them already.
+1. Install [NodeJS](https://nodejs.org/en/) and [MongoDB Community Server](https://www.mongodb.com/try/download/community) if you don't have them already. I would also encourage [MongoDB Compass](https://www.mongodb.com/products/compass) for more easily observing data changes.
 2. After cloning the project, copy the contents of `.env.sample` into a new file called `.env`, which also needs to be in the root project directory.
 3. Run `npm install`.
 4. Run `npm start`.
-5. I recommend using Postman to make requests to `localhost:3000` in order to interact with the API.
+5. I recommend using Postman to make requests to `localhost:3000` in order to interact with the API. I've gone ahead and made a [Postman Collection](https://www.getpostman.com/collections/ac9a8227c624dc1685d5) that you can import to easily test the API endpoints. This collection includes:
+	- GET all links based on `userId` (optional `dateCreated` sort)
+	- POST (create) a Classic link.
+	- POST (create) a Music link.
+	- POST (create) a Showlist link.
+	- POST (register) a User.
 
 Enjoy!
 

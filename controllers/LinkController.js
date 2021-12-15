@@ -10,6 +10,7 @@ const TypeMap = require('../linktypes/TypeMap')
 const RootLinkType = require('../linktypes/RootLinkType')
 
 module.exports = {
+  // TODO: Implement better error handling / validation
   createLink: async (req, res) => {
     try {
       let linkType = TypeMap[req.params.type]
@@ -20,6 +21,7 @@ module.exports = {
       res.status(401).send(e.message)
     }
   },
+  // TODO: Add validation messages for userId / sort
   getLinks: async (req, res) => {
     let userId = req.query.userId
     let dateCreatedSort = req.query.dateCreated ? req.query.dateCreated : 'desc'

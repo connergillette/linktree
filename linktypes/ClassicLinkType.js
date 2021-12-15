@@ -6,7 +6,7 @@ const ClassicLink = require('../models/ClassicLink')
 
 module.exports = {
   ref: 'ClassicLink',
-  create: async (rootLink, data) => {
+  create: async (data) => {
     try {
       return await new ClassicLink({
         linkDestination: data.linkDestination,

@@ -32,7 +32,15 @@ async function seedDB() {
   
   if (await MusicPlatform.findOne() === null) {
     console.log('Seeding music platforms...')
-    let allMusicPlatforms = ['Spotify', 'Apple Music', 'Soundcloud', 'YouTube Music', 'Deezer', 'Tidal', 'Bandcamp']
+    let allMusicPlatforms = [
+      'Spotify', 
+      'Apple Music', 
+      'Soundcloud', 
+      'YouTube Music', 
+      'Deezer', 
+      'Tidal', 
+      'Bandcamp'
+    ]
     for (let platform of allMusicPlatforms) {
       await new MusicPlatform({
         name: platform,
