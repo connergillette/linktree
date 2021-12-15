@@ -8,11 +8,6 @@ require('dotenv').config()
 const LinkController = require('./controllers/LinkController')
 const AuthController = require('./controllers/AuthController')
 
-const User = require('./models/User')
-const Link = require('./models/Link')
-const ClassicLink = require('./models/ClassicLink')
-const MusicPlatform = require('./models/MusicPlatform')
-
 app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({
@@ -27,34 +22,7 @@ app.use(
 
 async function connectToDB() {
   await mongoose.connect(process.env.MONGODB_CONNECTION)
-  console.log('Connected to DB.')
-
-  // TODO: Formalize this as its own seed file
-  if (await User.findOne() === null) {
-    console.log('Seeding user and classic link...')
-    await new User(requestData).save()
-
-    await new Link({
-      user: user,
-      title: 'Classic Link'
-    }).save()
-
-    await new ClassicLink({
-      linkDestination: 'https://linkedin.com/in/connergillette',
-      rootLink: createdRootLink
-    }).save()
-  }
-
-  if (await MusicPlatform.findOne() === null) {
-    console.log('Seeding music platforms...')
-    let allMusicPlatforms = ['Spotify', 'Apple Music', 'Soundcloud', 'YouTube Music', 'Deezer', 'Tidal', 'Bandcamp']
-    for (let platform of allMusicPlatforms) {
-      await new MusicPlatform({
-        name: platform,
-        alias: platform.split(' ')[0].toLowerCase()
-      }).save()
-    }
-  }
+  console.log('[APP] Connected to DB.')
 }
 
 connectToDB()
